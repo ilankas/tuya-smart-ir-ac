@@ -72,6 +72,7 @@ class TuyaThermostat(ClimateEntity):
         )
         self._sensor_name = climate[SENSOR]
         self._name = climate[NAME]
+        self._unique_id = climate[AC_ID]
 
     @property
     def name(self):
@@ -79,7 +80,7 @@ class TuyaThermostat(ClimateEntity):
 
     @property
     def unique_id(self):
-        return "tuya_hack_01"
+        return self._unique_id
 
     @property
     def temperature_unit(self):
