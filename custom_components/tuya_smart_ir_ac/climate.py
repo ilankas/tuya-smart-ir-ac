@@ -175,5 +175,5 @@ class TuyaThermostat(ClimateEntity):
                     if self._api._power == "0":
                         await self._api.async_turn_on()
                     await self._api.async_set_fan_speed(0)
-                    await self._api.async_set_hvac_mode(mode)
+                    await self._api.async_set_hvac_mode(hvac_mode)
                 break
